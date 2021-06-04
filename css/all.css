@@ -1,0 +1,201 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 通用 */
+*, *::before,*::after {
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	vertical-align: middle;
+}
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+body {
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+}
+.wrap {
+	background-color: #415165;
+	color: #FFFFFF;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.container-sm {
+	max-width: 996px;
+	margin: 0 auto;
+}
+h2 {
+	font-size: 32px;
+	border-bottom: 1px solid #000;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+h2 :lang(en) {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.16667;
+	margin-left: 1em;
+}
+.profile h2 :lang(en), .education h2 :lang(en), .work-experience h2 :lang(en){
+	color: #A00404;
+}
+p, li{
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+
+/* profile */
+.profile {
+	padding-top: 47px;
+}
+.profile .name {
+	font-size: 80px;
+	line-height: 1.175;
+	padding-bottom: 17px;
+	border-bottom: 2px solid #000;
+	margin-bottom: 48px;
+}
+.profile .profile-picture {
+	width: 324px;
+}
+.profile h2 {
+	margin-top: 3em;
+}
+.profile .text {
+	margin-bottom: 24px;
+}
+
+
+/* education */
+.education {
+	margin-top: 72px;
+}
+.education p {
+	margin-bottom: 24px;
+}
+
+/* skills */
+.skills {
+	margin-top: 72px;
+	padding: 24px 0 36px;
+	text-align: center;
+}
+.skills h2 {
+	border-color: #FFFFFF;
+	margin-bottom: 40px;	
+}
+.skills .menu {
+	display: inline-block;
+	border-left: 1px solid #96A9C4;
+	padding-left: 24px;
+	text-align: left;
+	font-size: 0;
+}
+.skills .menu li {
+	font-weight: 300;
+}
+.skills .menu li ~ li {
+	margin-top: 20px;
+}
+
+
+/* work-experience */
+.work-experience {
+	margin-top: 72px;
+}
+.work-experience h2 {
+	margin-bottom: 16px;
+}
+.work-experience .timeline {
+	border-left: 1px solid #96A9C4;
+	padding-left: 24px;
+	margin-left: 24px;
+}
+.work-experience .timeline li {
+	margin-bottom: 24px;
+}
+.work-experience .timeline .icon {
+	margin: 8px 0;
+	width: 90px;
+}
+.work-experience .timeline p {
+	max-width: 642px;
+	font-size: 20px;
+}
+
+
+/* contact */
+.contact{
+	margin-top: 72px;
+	padding: 24px 0 36px;
+	text-align: center;
+}
+.contact > h2 {
+	border-color: #FFFFFF;
+	margin-bottom: 32px;
+}
+.contact > p {
+	margin-bottom: 16px;
+}
+.contact-links > .link {
+	display: inline-block;
+	width: 48px;
+	font-size: 0;
+}
+.contact-links > .link +.link {
+	margin-left: 24px;
+}
+
+
