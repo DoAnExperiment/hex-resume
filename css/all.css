@@ -1,201 +1,167 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+@import url(reset.css);
+
+/* 
+1. 將 reset.css 放單個檔案。
+2. 常用的 margin、padding，設成單獨的 class 名稱；用在容器、大標題、副標題。
+3. 注意，.container-* 有設定 margin 值，要放在單邊 margin class 名稱之前；以防同時作用，會覆蓋到。
+4. 像學歷、工作經驗，時間上有順序的，使用 <ol>。
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+*,*::before,*::after{
+  box-sizing: border-box;
 }
 
-
-/* 通用 */
-*, *::before,*::after {
-	box-sizing: border-box;
+/* 兩種容器大小 */
+.container{
+  width: 1200px;
+  margin: 0 auto;
 }
-img {
-	width: 100%;
-	vertical-align: middle;
-}
-a {
-	text-decoration: none;
-	color: #FFF;
-}
-body {
-	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
-}
-.wrap {
-	background-color: #415165;
-	color: #FFFFFF;
-}
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-.container-sm {
-	max-width: 996px;
-	margin: 0 auto;
-}
-h2 {
-	font-size: 32px;
-	border-bottom: 1px solid #000;
-	padding-bottom: 0.5em;
-	margin-bottom: 1em;
-}
-h2 :lang(en) {
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 1.16667;
-	margin-left: 1em;
-}
-.profile h2 :lang(en), .education h2 :lang(en), .work-experience h2 :lang(en){
-	color: #A00404;
-}
-p, li{
-	font-size: 24px;
-	line-height: 1.5;
+.container-sm{
+  width: 996px;
+  margin: 0 auto;
 }
 
+/* margin 取 4 的倍數: 8、16、32、40、48、72 */
+.mb-4{
+  margin-bottom: 16px;
+}
+.mb-8{
+  margin-bottom: 32px;
+}
+.mb-10{
+  margin-bottom: 40px;
+}
+.mt-12{
+  margin-top: 48px;
+}
+.mb-12{
+  margin-bottom: 48px;
+}
+.mb-18{
+  margin-bottom: 72px;
+}
 
+/* padding 取 4 的倍數: 8、16、24、36 */
+.pb-2{
+  padding-bottom: 8px;
+}
+.pb-4{
+  padding-bottom: 16px;
+}
+.pt-6{
+  padding-top: 24px;
+}
+.pb-9{
+  padding-bottom: 36px;
+}
+
+/* 設定主要的字形、主要的字體大小 */
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.title{
+  font-family: 'Roboto', sans-serif;
+  font-size: 80px;
+  line-height: 94px;
+  border-bottom: 2px solid #000;
+}
+.pic{
+  width: 324px;
+  overflow: hidden;
+}
+.pic img{
+  width: 100%;
+  vertical-align: middle;
+}
 /* profile */
-.profile {
-	padding-top: 47px;
+.subTitle{
+  font-size: 32px;
+  line-height: 43px;
+  border-bottom: 1px solid #000;
 }
-.profile .name {
-	font-size: 80px;
-	line-height: 1.175;
-	padding-bottom: 17px;
-	border-bottom: 2px solid #000;
-	margin-bottom: 48px;
+.subTitle span{
+  color: #A00404;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-left: 16px;
 }
-.profile .profile-picture {
-	width: 324px;
+.profile .text ~ .text{
+  margin-top: 24px;
 }
-.profile h2 {
-	margin-top: 3em;
-}
-.profile .text {
-	margin-bottom: 24px;
-}
-
-
 /* education */
-.education {
-	margin-top: 72px;
+.education .education-list li ~ li{
+  margin-top: 24px;
 }
-.education p {
-	margin-bottom: 24px;
+/* darkBlue 樣式 */
+.darkBlue{
+  background-color: #415165;
+  color: #fff;
 }
-
+.darkBlue .subTitle{
+  border-bottom: 1px solid #fff;
+}
+.darkBlue .subTitle span{
+  color: #fff;
+}
 /* skills */
-.skills {
-	margin-top: 72px;
-	padding: 24px 0 36px;
-	text-align: center;
+.skills{
+  text-align: center;
 }
-.skills h2 {
-	border-color: #FFFFFF;
-	margin-bottom: 40px;	
+.skill-list{
+  display: inline-block;
+  border-left: 1px solid #96A9C4;
+  padding-left: 24px;
+  font-size: 0;
+  text-align-last: left;
 }
-.skills .menu {
-	display: inline-block;
-	border-left: 1px solid #96A9C4;
-	padding-left: 24px;
-	text-align: left;
-	font-size: 0;
+.skill-list li{
+  font-size: 24px;
 }
-.skills .menu li {
-	font-weight: 300;
+.skill-list li ~ li{
+  margin-top: 20px;
 }
-.skills .menu li ~ li {
-	margin-top: 20px;
+/* work */
+.work-list{
+  margin-left: 24px;
+  border-left: 1px solid #96A9C4;
+  padding-left: 24px;
 }
-
-
-/* work-experience */
-.work-experience {
-	margin-top: 72px;
+.work-list li ~ li{
+  margin-top: 24px;
 }
-.work-experience h2 {
-	margin-bottom: 16px;
+.work-list p{
+  max-width: 640px;
+  font-size: 20px;
 }
-.work-experience .timeline {
-	border-left: 1px solid #96A9C4;
-	padding-left: 24px;
-	margin-left: 24px;
+.work-list img{
+  display: block;
+  width: 90px;
+  margin: 8px 0;
 }
-.work-experience .timeline li {
-	margin-bottom: 24px;
-}
-.work-experience .timeline .icon {
-	margin: 8px 0;
-	width: 90px;
-}
-.work-experience .timeline p {
-	max-width: 642px;
-	font-size: 20px;
-}
-
-
 /* contact */
 .contact{
-	margin-top: 72px;
-	padding: 24px 0 36px;
-	text-align: center;
+  text-align: center;
 }
-.contact > h2 {
-	border-color: #FFFFFF;
-	margin-bottom: 32px;
+.contact a{
+  color: #fff;
+  text-decoration: none;
 }
-.contact > p {
-	margin-bottom: 16px;
+.contact a:hover{
+  text-decoration: underline;
 }
-.contact-links > .link {
-	display: inline-block;
-	width: 48px;
-	font-size: 0;
+.method li{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-bottom: 16px;
 }
-.contact-links > .link +.link {
-	margin-left: 24px;
+.community li{
+  display: inline-block;
+  font-size: 0;
 }
-
-
+.community li ~ li{
+  margin-left: 24px;
+}
