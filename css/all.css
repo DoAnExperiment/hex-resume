@@ -1,10 +1,17 @@
 @import url(reset.css);
 
 /* 
-1. 將 reset.css 放單個檔案。
-2. 常用的 margin、padding，設成單獨的 class 名稱；用在容器、大標題、副標題。
-3. 注意，.container-* 有設定 margin 值，要放在單邊 margin class 名稱之前；以防同時作用，會覆蓋到。
-4. 像學歷、工作經驗，時間上有順序的，使用 <ol>。
+# 一些想法
+
+1. 讓自己可以專注於本身手刻的程式碼 - 將 reset.css 抽出來，放單支檔案。
+
+2. 常用的 margin、padding，設成通用的 class 名稱；用在容器、區塊 (.profile、.education 之類的)、大標題、副標題。
+
+3. 注意，.container-* 要放在通用 margin class 名稱之前；當兩個 class 名稱同時使用 (權重相同)，通用 margin 只覆蓋掉單邊。
+
+4. 區塊裡的小項目(.text、li)，它們之間距離盡量使用 margin-top 來推，避免與區塊產生 "margin collapsing"。
+
+5. 像學歷、工作經驗，時間上有順序的，使用 <ol>。
 */
 
 *,*::before,*::after{
